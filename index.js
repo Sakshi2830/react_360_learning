@@ -1,43 +1,43 @@
 import React from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
+ Image,asset,
   View,
+  Text,
 } from 'react-360';
 
 export default class welcomeTo360 extends React.Component {
   render() {
     return (
-      <View style={styles.panel}>
-        <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>
-            Welcome to React 360
+      <View 
+      style={{
+        backgroundColor:'rgba(255,255,255,0.4)',
+        width:1000,
+        height:600
+      }}
+      >
+        <Image source={asset('nature.jpg')}
+        style={{
+          width:1000,
+          height:600
+        }}
+        >
+          <Text style={{
+            color: 'black',
+            fontSize:20,
+            fontWeight:'bold',
+            justifyContent:'center',
+            alignItems: 'center'
+          }}>
+            Fuck you Bitches 🖕
           </Text>
-        </View>
+        </Image>
+       
       </View>
     );
   }
 };
 
-const styles = StyleSheet.create({
-  panel: {
-    // Fill the entire surface
-    width: 1000,
-    height: 600,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  greetingBox: {
-    padding: 20,
-    backgroundColor: '#000000',
-    borderColor: '#639dda',
-    borderWidth: 2,
-  },
-  greeting: {
-    fontSize: 30,
-  },
-});
+  
 
 AppRegistry.registerComponent('welcomeTo360', () => welcomeTo360);
