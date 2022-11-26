@@ -9,17 +9,13 @@ import {
 export default class welcomeTo360 extends React.Component {
   render() {
     return (
-      <View 
-      style={{
-        backgroundColor:'rgba(255,255,255,0.4)',
-        width:1000,
-        height:600
-      }}
-      >
+      <View>
         <Image source={asset('nature.jpg')}
         style={{
-          width:1000,
-          height:600
+          width:1500,
+          height:300,
+          
+          
         }}
         >
           <Text style={{
@@ -29,7 +25,7 @@ export default class welcomeTo360 extends React.Component {
             justifyContent:'center',
             alignItems: 'center'
           }}>
-            Fuck you Bitches 🖕
+            supp Bitches 🖕
           </Text>
         </Image>
        
