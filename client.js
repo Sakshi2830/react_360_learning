@@ -10,26 +10,32 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
-  //  const mycylinderSurface = new Surface(
-  //   1000,
-  //   600,
-  //   Surface.SurfaceShape.Cylinder
+   const mycylinderSurface = new Surface(
+    1000,
+    600,
+    Surface.SurfaceShape.Cylinder
 
-  //  )
+   )
    const myFlatSurface = new Surface(
-    700,
-  200,
+    500,
+  720,
   Surface.SurfaceShape.Flat
    );
 
    myFlatSurface.setAngle(
     0,0,0
    );
+
+   r360.renderToSurface(
+    r360.createRoot('welcomeTo360', { /* initial props */ }),
+    mycylinderSurface
+  );
   // Render your app content to the default cylinder surface
   r360.renderToSurface(
-    r360.createRoot('welcomeTo360', { /* initial props */ }),
+    r360.createRoot('flatSurface', { /* initial props */ }),
     myFlatSurface
   );
+ 
 
   // Load the initial environment
   r360.compositor.setBackground(r360.getAssetURL('lobby.jpeg'));

@@ -5,6 +5,7 @@ import {
   View,
   Text,
 } from 'react-360';
+import flatSurface from './components/flatSurface';
 
 export default class welcomeTo360 extends React.Component {
   render() {
@@ -12,23 +13,12 @@ export default class welcomeTo360 extends React.Component {
       <View>
         <Image source={asset('nature.jpg')}
         style={{
-          width:1500,
-          height:300,
+          width:1000,
+          height:600,
           
           
         }}
-        >
-          <Text style={{
-            color: 'black',
-            fontSize:20,
-            fontWeight:'bold',
-            justifyContent:'center',
-            alignItems: 'center'
-          }}>
-            supp Bitches 🖕
-          </Text>
-        </Image>
-       
+        />
       </View>
     );
   }
@@ -37,3 +27,4 @@ export default class welcomeTo360 extends React.Component {
   
 
 AppRegistry.registerComponent('welcomeTo360', () => welcomeTo360);
+AppRegistry.registerComponent('flatSurface', () => flatSurface)
